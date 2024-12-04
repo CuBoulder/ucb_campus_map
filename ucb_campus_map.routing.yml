@@ -1,0 +1,6 @@
+ucb_campus_map.legacy_map_redirect:
+  path: '/map.html'
+  defaults:
+    _controller: 'Drupal\ucb_campus_map\Controller\MapRedirectController::legacyMapRedirect'
+  requirements: 
+    _permission: access content

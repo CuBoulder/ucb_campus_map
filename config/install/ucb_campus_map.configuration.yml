@@ -1,0 +1,481 @@
+buildings:
+  ADEN:
+    # label: Aden Hall
+    marker: '193791'
+  AERO:
+    # label: Aerospace Engineering Sciences
+    marker: '429230'
+  ALUM:
+    # label: Koenig Alumni Center
+    marker: '193918'
+  ANDS:
+    # label: Andrews Hall
+    marker: '193793'
+  ARCE:
+    # label: Administrative and Research Center
+    marker: '193792'
+  ARL:
+    # label: Astrophysical Research Lab (Formerly CASA)
+    marker: '193819'
+  ARMR:
+    # label: Armory
+    marker: '193794'
+  ARNT:
+    # label: Arnett Hall
+    marker: '193798'
+  ATCT:
+    # label: Athens Court
+    marker: '193799'
+  ATHN:
+    # label: Athens North Court
+    marker: '193800'
+  ATLS:
+    # label: Roser ATLAS Center
+    marker: '193967'
+  BCAP:
+    # label: Bear Creek Apartments at Williams Village
+    marker: '193805'
+  BESC:
+    # label: Benson Earth Sciences
+    marker: '222147'
+  BIOT:
+    # label: Jennie Smoly Caruthers Biotec Building
+    marker: '193911'
+  BKER:
+    # label: Baker Hall
+    marker: '193803'
+  BRKT:
+    # label: Brackett Hall
+    marker: '193808'
+  BUCK:
+    # label: Buckingham Hall
+    marker: '193810'
+  C4C:
+    # label: Center for Community
+    marker: '193820'
+  CARL:
+    # label: Carlson Gymnasium
+    marker: '193818'
+  CASA:
+    # label: Center for Asian Studies
+    marker: '226113'
+  CASE:
+    # label: The Center for Academic Success and Engagement (CASE)
+    marker: '347439'
+  CEDU:
+    # label: Continuing Education
+    marker: '193828'
+  CHEM:
+    # label: Cristol Chemistry and Biochemistry
+    marker: '193831'
+  CHEY:
+    # label: Cheyenne Arapaho Hall
+    marker: '193823'
+  CHMP:
+    # label: Champion Center
+    marker: '193821'
+  CINC:
+    # label: Center for Innovation & Creativity
+    marker: '204895'
+  CIRE:
+    # label: Cooperative Institute for Research in Environmental Sciences (CIRES)
+    marker: '193829'
+  CKRL:
+    # label: Cockerell Hall
+    marker: '193826'
+  CLRE:
+    # label: Clare Small Arts and Sciences
+    marker: '193824'
+  CLUB:
+    # label: University Club
+    marker: '193988'
+  COMP:
+    # label: Computing Center
+    marker: '193827'
+  COTT:
+    # label: Gates Woodruff Womens Studies Cottage
+    marker: '193875'
+  CROS:
+    # label: Crosman Hall
+    marker: '193832'
+  DACR:
+    # label: Children's Center
+    marker: '193867'
+  DALW:
+    # label: Dal Ward Athletic Center
+    marker: '193833'
+  DDW:
+    # label: Duane D-Wing
+    marker: '193840'
+  DEN:
+    # label: Denison Arts and Sciences
+    marker: '193838'
+  DLC:
+    # label: Discovery Learning Center
+    marker: '193839'
+  DLYT:
+    # label: Darley North
+    marker: '193836'
+  # DLYT:
+    # label: Darly South
+    # marker: '193837'
+  DUAN:
+    # label: Duane Physics and Astrophysics
+    marker: '193841'
+  EC:
+    # label: Engineering Center
+    marker: '193854'
+  ECAE:
+    # label: Aerospace Engineering Wing
+    marker: '193857'
+  ECCE:
+    # label: Civil Engineering Wing
+    marker: '193856'
+  ECCS:
+    # label: Computer Science Wing
+    marker: '193860'
+  ECEE:
+    # label: Electrical Engineering Wing
+    marker: '193858'
+  ECCR:
+    # label: Engineering Classroom Wing
+    marker: '432490'
+  ECAD:
+    # label: Engineering Administration Wing
+    marker: '432492'
+  ECME:
+    # label: Mechanical Engineering Wing
+    marker: '193859'
+  ECST:
+    # label: Engineering South Tower
+    marker: '432497'
+  ECSL:
+    # label: Engineering Stores & Labs
+    marker: '432496'
+  ECES:
+    # label: Environmental Sustainability Wing
+    marker: '193855'
+  ECOT:
+    # label: Engineering Office Tower
+    marker: '432491'
+  ECON:
+    # label: Economics
+    marker: '193844'
+  EDUC:
+    # label: Education
+    marker: '193852'
+  EHSC:
+    # label: Environmental Health and Safety Center
+    marker: '193862'
+  EKLC:
+    # label: Ekeley Science
+    marker: '193853'
+  EMB:
+    # label: Embassy Suites
+    marker: '510425'
+  ENVD:
+    # label: Environmental Design
+    marker: '193861'
+  EVNT:
+    # label: CU Events Center
+    marker: '199650'
+  FACT1:
+    # label: Faculty-Staff Court Housing
+    marker: '193866'
+  FH:
+    # label: Balch Fieldhouse
+    marker: '193804'
+  FISK:
+    # label: Fiske Planetarium and Science Center
+    marker: '193870'
+  FLMG:
+    # label: Fleming Building
+    marker: '193871'
+  FRND:
+    # label: Farrand Hall
+    marker: '193869'
+  GH-3:
+    # label: Research Park Greenhouse
+    marker: '193966'
+  GOLD:
+    # label: Gold Biosciences Building
+    marker: '193876'
+  GROC:
+    # label: Grounds and Recycling Operations Center
+    marker: '206140'
+  GUGG:
+    # label: Guggenheim Geography
+    marker: '193877'
+  GVAS:
+    # label: Center for Native American & Indigenous studies (CNAIS)
+    marker: '268233'
+  HALE:
+    # label: Hale Science
+    marker: '193879'
+  HEND:
+    # label: Museum of Natural History (Henderson)
+    marker: '193940'
+  HLET:
+    # label: Hallett Hall
+    marker: '193880'
+  HLMS:
+    # label: Hellems Arts and Sciences
+    marker: '193881'
+  HSMC:
+    # label: Housing System Maintenance Center
+    marker: '193883'
+  HSSC:
+    # label: Housing System Service Center
+    marker: '193884'
+  HUMN:
+    # label: Eaton Humanities
+    marker: '193885'
+  IB10:
+    # label: Institute of Behavioral Science No. 10
+    marker: '193907'
+  IBG:
+    # label: Institute for Behavioral Genetics
+    marker: '193896'
+  IBS:
+    # label: Institute of Behavioral Science
+    marker: '193898'
+  IBS9:
+    # label: Institute of Behavioral Science No. 09
+    marker: '193906'
+  IEC:
+    # label: International English Center
+    marker: '193909'
+  INFO:
+    # label: CMCI Department of Information Science
+    marker: '193981'
+  IPRC:
+    # label: Indoor Practice Facility
+    marker: '204891'
+  ITLL:
+    # label: Integrated Teaching and Learning Laboratory
+    marker: '193908'
+  JILA:
+    # label: JILA
+    marker: '193910'
+  KOBL:
+    # label: 'Koelbel Building: Leeds School of Business'
+    marker: '193917'
+  KTCH:
+    # label: Ketchum Arts and Sciences
+    marker: '193913'
+  LESS:
+    # label: Lesser House
+    marker: '193920'
+  LIBR:
+    # label: Norlin Library
+    marker: '193942'
+  LIBY:
+    # label: Libby Hall
+    marker: '193921'
+  LITR:
+    # label: Research Laboratory No. 1, Litman
+    marker: '193962'
+  LRVN:
+    # label: Kittredge Central
+    marker: '193914'
+  LSRL:
+    # label: Research Laboratory No. 4, Life Science
+    marker: '193964'
+  LSTR:
+    # label: LASP Space Technology Research Center
+    marker: '193919'
+  MAIN:
+    # label: Old Main
+    marker: '193948'
+  MATH:
+    # label: Mathematics Building
+    marker: '193928'
+  MBE:
+    # label: Miramontes Baca Education Building
+    marker: '193871'
+  MCKY:
+    # label: Macky Auditorium
+    marker: '193924'
+  MCOL:
+    # label: Bruce Curtis Building (Museum Collections)
+    marker: '193809'
+  MILL:
+    # label: Millenium Harvest House Hotel
+    marker: '510424'
+  MKNA:
+    # label: McKenna Languages
+    marker: '193936'
+  MRCT:
+    # label: Marine Court
+    marker: '193926'
+  MSSC:
+    # label: Research Laboratory No. 6, Marine Street Science Center
+    marker: '193965'
+  MUEN:
+    # label: Muenzinger Psychology
+    marker: '193937'
+  MUS:
+    # label: Imig Music
+    marker: '193889'
+  NIWOT:
+    # label: Kittredge West Hall
+    marker: '193916'
+  NTCT:
+    # label: Newton Court
+    marker: '193941'
+  OB1:
+    # label: Arts & Sciences Office Building 1
+    marker: '224596'
+  OBSV:
+    # label: Sommers-Bausch Observatory
+    marker: '193973'
+  PDPS:
+    # label: Police and Parking Services
+    marker: '206032'
+  PFDC:
+    # label: Page Foundation Center
+    marker: '205907'
+  PFPS:
+    # label: Athletics Practice Field
+    marker: '218691'
+  PORT:
+    # label: Porter Biosciences
+    marker: '193952'
+  POTT:
+    # label: Potts Field
+    marker: '218696'
+  POWR:
+    # label: Power House
+    marker: '203742'
+  RAMY:
+    # label: Ramaley Biology
+    marker: '193957'
+  REC:
+    # label: Student Recreation Center
+    marker: '193980'
+  REED:
+    # label: Reed Hall
+    marker: '193960'
+  RGNT:
+    # label: Regent Administrative Center
+    marker: '193961'
+  RL2:
+    # label: Research Laboratory No. 2, RL2
+    marker: '193963'
+  SEEC:
+    # label: Sustainability, Energy and Environment Community (SEEC)
+    marker: '193923'
+  SEEL:
+    # label: Sustainability, Energy and Environment Laboratory (SEEL)
+    marker: '204809'
+  SLHS:
+    # label: Speech, Language, and Hearing Sciences
+    marker: '193976'
+  SLL:
+    # label: Science Learning Laboratory
+    marker: '193969'
+  SMCT:
+    # label: Smiley Court
+    marker: '193971'
+  SMTH:
+    # label: Smith Hall
+    marker: '193972'
+  SPSC:
+    # label: Space Science Building
+    marker: '193975'
+  STAD:
+    # label: Folsom Field & Stadium
+    marker: '193872'
+  STNE:
+    # label: Stearns East
+    marker: '204615'
+  STNW:
+    # label: Stearns West
+    marker: '204614'
+  STRN:
+    # label: Stearns Commons
+    marker: '193979'
+  STTB:
+    # label: Stadium Ticket Building
+    marker: '193977'
+  SWLL:
+    # label: Sewall Hall
+    marker: '193970'
+  TB01:
+    # label: Temporary Building No. 1
+    marker: '193983'
+  TB19:
+    # label: University Administrative Center Annex
+    marker: '193987'
+  TB82:
+    # label: Temporary Building 82
+    marker: '224591'
+  THTR:
+    # label: University Theatre
+    marker: '193994'
+  TLC:
+    # label: Technology Learning Center
+    marker: '193981'
+  TRAN:
+    # label: Transportation Center and Annex
+    marker: '203745'
+  UCTR:
+    # label: University Administrative Center
+    marker: '193986'
+  # UMC:
+    # label: CU Book Store
+    # marker: '193816'
+  UMC:
+    # label: University Memorial Center (UMC)
+    marker: '222210'
+  VAC:
+    # label: Visual Arts Complex
+    marker: '193996'
+  W-BF:
+    # label: Business Field
+    marker: '193811'
+  W-FR:
+    # label: Franklin Field
+    marker: '218695'
+  W-GT:
+    # label: Gamow Tower
+    marker: '193874'
+  W-KF:
+    # label: Kittredge Field
+    marker: '218694'
+  W-MR:
+    # label: Mary Rippon Theatre
+    marker: '193927'
+  W-PRF:
+    # label: Prentup Field
+    marker: '218697'
+  W-TF:
+    # label: Dalton Trumbo Fountain Court
+    marker: '193834'
+  WALN:
+    # label: Distribution Center
+    marker: '206133'
+  WARD:
+    # label: Wardenburg Student Health Center
+    marker: '205905'
+  WDBY:
+    # label: Woodbury Arts and Sciences
+    marker: '194006'
+  WLAW:
+    # label: Wolf Law
+    marker: '194001'
+  WLRD:
+    # label: Willard Hall
+    marker: '194000'
+  WVC:
+    # label: Village Center Dining and Community Commons
+    marker: '193835'
+  WVHP:
+    # label: Williams Village Heating Plant
+    marker: '232151'
+  WVN:
+    # label: Williams Village North
+    marker: '204893'
+  WVRC:
+    # label: Williams Village Recreation Center
+    marker: '239752'
