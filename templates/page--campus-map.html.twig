@@ -4,13 +4,16 @@
  * Contains the template to display the campus map page.
  */
 #}
-<h1 class="visually-hidden">
-  {{ page['#title'] }}
-</h1>
-<p class="visually-hidden">
-  CU Boulder is committed to making information available via assistive technologies. The campus map has known issues with certain assistive technologies that we are working with the supplier to resolve.
-</p>
-<iframe class="position-absolute d-block w-100 h-100 border-0" id="campusMap" width="100%" height="100%" src="https://map.concept3d.com/?id=336" frameborder="0" scrolling="no" border="0" allow="geolocation;fullscreen"></iframe>
+<main>
+  <a id="main-content" tabindex="-1"></a>
+  <h1 class="visually-hidden">
+    {{ page['#title'] }}
+  </h1>
+  <p class="visually-hidden">
+    CU Boulder is committed to making information available via assistive technologies. The campus map has known issues with certain assistive technologies that we are working with the supplier to resolve.
+  </p>
+  <iframe class="position-absolute d-block w-100 h-100 border-0" id="campusMap" width="100%" height="100%" src="https://map.concept3d.com/?id=336" frameborder="0" scrolling="no" border="0" allow="geolocation;fullscreen"></iframe>
+</main>
 <script type="text/javascript">
   (function(campusMap){
     const baseURL = 'https://map.concept3d.com/?id=336';
