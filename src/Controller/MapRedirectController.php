@@ -16,7 +16,7 @@ class MapRedirectController extends ControllerBase {
    * @param string $building
    *   The building code.
    *
-   * @return \Drupal\Core\Routing\TrustedRedirectResponse
+   * @return \Symfony\Component\HttpFoundation\RedirectResponse
    *   A redirect response.
    */
   protected function mapRedirect($building) {
@@ -37,7 +37,7 @@ class MapRedirectController extends ControllerBase {
    * @param \Symfony\Component\HttpFoundation\Request $request
    *   The incomming request.
    *
-   * @return \Drupal\Core\Routing\TrustedRedirectResponse
+   * @return \Symfony\Component\HttpFoundation\RedirectResponse
    *   A redirect response.
    */
   public function legacyMapRedirect(Request $request) {
