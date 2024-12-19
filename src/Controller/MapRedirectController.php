@@ -13,16 +13,16 @@ class MapRedirectController extends ControllerBase {
   /**
    * Redirects the legacy building code to the correct map URL.
    *
-   * @param string $building
+   * @param string|null $building
    *   The building code.
    *
    * @return \Symfony\Component\HttpFoundation\RedirectResponse
    *   A redirect response.
    */
   protected function mapRedirect($building) {
-    $building = strtoupper($building);
+    $building = $building ? strtoupper($building) : '';
     $buildings = $this->config('ucb_campus_map.configuration')->get('buildings');
-    $options = [];
+    $options = ['absolute' => TRUE];
     if (isset($buildings[$building])) {
       $options['fragment'] = '!m/' . $buildings[$building]['marker'];
     }

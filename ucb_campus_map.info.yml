@@ -2,5 +2,5 @@ name: CU Boulder Campus Map
 description: Enables the CU Boulder Campus Map.
 core_version_requirement: ^10 || ^11
 type: module
-version: '1.0.1'
+version: '1.0.2'
 package: CU Boulder
