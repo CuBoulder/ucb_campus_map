@@ -26,6 +26,18 @@ class MapRedirectController extends ControllerBase {
     if (isset($buildings[$building])) {
       $options['fragment'] = '!m/' . $buildings[$building]['marker'];
     }
+
+    $config = $this->configFactory->get('pantheon_domain_masking.settings');
+    $enabled = \filter_var($config->get('enabled', 'no'), FILTER_VALIDATE_BOOLEAN);
+    if ($enabled === TRUE) {
+      $subpath = $config->get('subpath', '');
+      if ($subpath === 'map') {
+        $path = 'https://www.colorado.edu/map/#' . $options["fragment"];
+        $redirect = new TrustedRedirectResponse($path);
+        return $redirect;
+      }
+    }
+
     return $this->redirect('<front>', [], $options, 301);
   }
 

@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- ### Add a workaround due to domain masking issues
+  Add a special case for the map site.
+---
+
 - ### Adds missing document structure to campus map template (v1.0.1)
   This update adds missing document structure to the campus map template to provide better context for assistive technologies.
   
