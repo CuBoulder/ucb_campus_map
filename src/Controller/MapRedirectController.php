@@ -4,6 +4,7 @@ namespace Drupal\ucb_campus_map\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\HttpFoundation\Request;
+use Drupal\Core\Routing\TrustedRedirectResponse;
 
 /**
  * Provides a controller for map redirect rotues.
