@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- ### Add use statement for TrustedRedirectResponse
+  
+---
+
 - ### Add a workaround due to domain masking issues
   Add a special case for the map site.
 ---
