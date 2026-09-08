@@ -1,9 +1,8 @@
 services:
   ucb_campus_map.map_path:
     class: Drupal\ucb_campus_map\MapPathManager
-    arguments: ['@config.factory', '@path.matcher', '@path.current']
-  ucb_campus_map.route_subscriber:
-    class: Drupal\ucb_campus_map\Routing\MapRouteSubscriber
-    arguments: ['@ucb_campus_map.map_path']
-    tags:
-      - { name: event_subscriber }
+    arguments:
+      - '@config.factory'
+      - '@path.matcher'
+      - '@path.current'
+      - '@path_alias.manager'

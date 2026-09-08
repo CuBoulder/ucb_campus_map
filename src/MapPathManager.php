@@ -6,6 +6,7 @@ use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Path\CurrentPathStack;
 use Drupal\Core\Path\PathMatcherInterface;
 use Drupal\Core\Url;
+use Drupal\path_alias\AliasManagerInterface;
 
 /**
  * Resolves the configured campus map path.
@@ -16,11 +17,6 @@ class MapPathManager {
    * The configuration object name.
    */
   const CONFIG_NAME = 'ucb_campus_map.configuration';
-
-  /**
-   * The route name used when the map is not on the homepage.
-   */
-  const ROUTE_NAME = 'ucb_campus_map.page';
 
   /**
    * The default map path (homepage).
@@ -54,6 +50,13 @@ class MapPathManager {
   protected $currentPath;
 
   /**
+   * The path alias manager.
+   *
+   * @var \Drupal\path_alias\AliasManagerInterface
+   */
+  protected $aliasManager;
+
+  /**
    * Constructs a MapPathManager.
    *
    * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
@@ -62,15 +65,19 @@ class MapPathManager {
    *   The path matcher.
    * @param \Drupal\Core\Path\CurrentPathStack $current_path
    *   The current path stack.
+   * @param \Drupal\path_alias\AliasManagerInterface $alias_manager
+   *   The path alias manager.
    */
   public function __construct(
     ConfigFactoryInterface $config_factory,
     PathMatcherInterface $path_matcher,
     CurrentPathStack $current_path,
+    AliasManagerInterface $alias_manager,
   ) {
     $this->configFactory = $config_factory;
     $this->pathMatcher = $path_matcher;
     $this->currentPath = $current_path;
+    $this->aliasManager = $alias_manager;
   }
 
   /**
@@ -104,7 +111,14 @@ class MapPathManager {
     if ($this->isFrontPageMap()) {
       return $this->pathMatcher->isFrontPage();
     }
-    return $this->normalizePath($this->currentPath->getPath()) === $this->getPath();
+
+    $map_path = $this->getPath();
+    foreach ($this->getCurrentPaths() as $path) {
+      if ($this->normalizePath($path) === $map_path) {
+        return TRUE;
+      }
+    }
+    return FALSE;
   }
 
   /**
@@ -142,6 +156,20 @@ class MapPathManager {
       $path = rtrim($path, '/');
     }
     return $path;
+  }
+
+  /**
+   * Returns the current system path and alias for comparison.
+   *
+   * @return string[]
+   *   The current internal path and its alias, if any.
+   */
+  protected function getCurrentPaths() {
+    $system_path = $this->currentPath->getPath();
+    return array_unique([
+      $system_path,
+      $this->aliasManager->getAliasByPath($system_path),
+    ]);
   }
 
 }

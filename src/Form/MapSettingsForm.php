@@ -4,7 +4,6 @@ namespace Drupal\ucb_campus_map\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Url;
 use Drupal\ucb_campus_map\MapPathManager;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -58,7 +57,7 @@ class MapSettingsForm extends ConfigFormBase {
     $form['map_path'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Map path'),
-      '#description' => $this->t('The site path where the campus map is displayed. Use %front to keep the map on the homepage, or a path such as %map so the homepage can be used for a landing page.', [
+      '#description' => $this->t('The path of the page the campus map should override. Use %front for the homepage, or the path of an existing page such as %map. Create the page first; the map will replace it the same way it replaces the homepage.', [
         '%front' => '/',
         '%map' => '/map',
       ]),
@@ -99,14 +98,6 @@ class MapSettingsForm extends ConfigFormBase {
 
     if (preg_match('/^\/(admin|user|system)(\/|$)/', $path)) {
       $form_state->setErrorByName('map_path', $this->t('The path %path cannot be used for the campus map.', [
-        '%path' => $path,
-      ]));
-      return;
-    }
-
-    $url = Url::fromUserInput($path);
-    if ($url->isRouted() && $url->getRouteName() !== MapPathManager::ROUTE_NAME) {
-      $form_state->setErrorByName('map_path', $this->t('The path %path is already in use.', [
         '%path' => $path,
       ]));
     }
