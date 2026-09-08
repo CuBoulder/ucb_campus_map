@@ -1,0 +1,16 @@
+ucb_campus_map.configuration:
+  type: config_object
+  label: 'Campus Map configuration'
+  mapping:
+    map_path:
+      type: path
+      label: 'Map path'
+    buildings:
+      type: sequence
+      label: 'Legacy building codes'
+      sequence:
+        type: mapping
+        mapping:
+          marker:
+            type: string
+            label: 'Marker ID'

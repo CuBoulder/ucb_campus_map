@@ -2,5 +2,15 @@ ucb_campus_map.legacy_map_redirect:
   path: '/map.html'
   defaults:
     _controller: 'Drupal\ucb_campus_map\Controller\MapRedirectController::legacyMapRedirect'
-  requirements: 
+  requirements:
     _permission: access content
+
+ucb_campus_map.settings:
+  path: '/admin/config/system/ucb-campus-map'
+  defaults:
+    _form: '\Drupal\ucb_campus_map\Form\MapSettingsForm'
+    _title: 'Campus Map settings'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: true

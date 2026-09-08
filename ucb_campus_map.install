@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the CU Boulder Campus Map module.
+ */
+
+/**
+ * Adds a configurable map path, defaulting to the homepage.
+ */
+function ucb_campus_map_update_10001() {
+  $config = \Drupal::configFactory()->getEditable('ucb_campus_map.configuration');
+  if ($config->get('map_path') === NULL) {
+    $config->set('map_path', '/')->save();
+  }
+}

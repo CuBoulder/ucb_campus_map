@@ -4,6 +4,10 @@
  * Contains the template to display the campus map page.
  */
 #}
+{% if ucb_rave_alerts %}
+  {# position-relative + z-3 keep an active alert above the fullscreen iframe. #}
+  <rave-alert class="position-relative z-3 d-block" feed="https://www.getrave.com/rss/cuboulder/channel1" link="https://alerts.colorado.edu"></rave-alert>
+{% endif %}
 <main>
   <a id="main-content" tabindex="-1"></a>
   <h1 class="visually-hidden">
