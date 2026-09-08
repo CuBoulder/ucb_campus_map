@@ -9,6 +9,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- ### Map Updates
+  Updated the map so that it can display rave alerts above the map if there is one active.
+  
+  Added new settings page for configurable page display
+  `/admin/config/system/ucb-campus-map`
+  
+  `/` leaves the map at the homepage
+  Adding a different path there allows it to be displayed elsewhere like at `/map`
+  
+  Update hook should keep the current path at `/` and everything should continue to work when updated.
+  
+  Resolves #9 
+  Resolves #10 
+---
+
 - ### Add use statement for TrustedRedirectResponse
   
 ---

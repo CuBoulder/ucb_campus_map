@@ -8,10 +8,11 @@
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  *
- * Allows the campus map template in this module to override the site homepage.
+ * Allows the campus map template in this module to override the configured
+ * map page.
  */
 function ucb_campus_map_theme_suggestions_page_alter(array &$suggestions, array $variables) {
-  if (\Drupal::service('path.matcher')->isFrontPage()) {
+  if (\Drupal::service('ucb_campus_map.map_path')->isMapPage()) {
     $suggestions[] = 'page__campus_map';
   }
 }
@@ -19,11 +20,42 @@ function ucb_campus_map_theme_suggestions_page_alter(array &$suggestions, array 
 /**
  * Implements hook_preprocess_HOOK().
  *
- * Modfiies the homepage title to avoid duplication, e.g. “Campus Map | Campus
- * Map | University of Colorado Boulder”. The title is set to the site name.
+ * Ensures the Rave alert flag from the base theme is available on the campus
+ * map page template, which replaces boulder_base page.html.twig.
+ */
+function ucb_campus_map_preprocess_page(array &$variables) {
+  if (\Drupal::service('ucb_campus_map.map_path')->isMapPage()) {
+    ucb_campus_map_set_rave_alerts($variables);
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page__campus_map.
+ */
+function ucb_campus_map_preprocess_page__campus_map(array &$variables) {
+  ucb_campus_map_set_rave_alerts($variables);
+}
+
+/**
+ * Sets the Rave alerts flag used by the campus map template.
+ */
+function ucb_campus_map_set_rave_alerts(array &$variables) {
+  if (!isset($variables['ucb_rave_alerts'])) {
+    $variables['ucb_rave_alerts'] = theme_get_setting('ucb_rave_alerts');
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Modifies the homepage title to avoid duplication, e.g. “Campus Map | Campus
+ * Map | University of Colorado Boulder”. The title is set to the site name
+ * when the map is displayed on the front page.
  */
 function ucb_campus_map_preprocess_html(array &$variables) {
-  if (\Drupal::service('path.matcher')->isFrontPage()) {
+  $variables['#cache']['tags'][] = 'config:ucb_campus_map.configuration';
+  $map_path = \Drupal::service('ucb_campus_map.map_path');
+  if ($map_path->isFrontPageMap() && $map_path->isMapPage()) {
     $variables['head_title'] = [\Drupal::config('system.site')->get('name')];
   }
 }

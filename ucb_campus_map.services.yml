@@ -1,0 +1,8 @@
+services:
+  ucb_campus_map.map_path:
+    class: Drupal\ucb_campus_map\MapPathManager
+    arguments:
+      - '@config.factory'
+      - '@path.matcher'
+      - '@path.current'
+      - '@path_alias.manager'

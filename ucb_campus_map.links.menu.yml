@@ -1,0 +1,5 @@
+ucb_campus_map.settings:
+  title: Campus Map
+  description: 'Choose which path displays the campus map.'
+  parent: system.admin_config_system
+  route_name: ucb_campus_map.settings
