@@ -23,8 +23,8 @@ legacy building codes. The configuration for this feature can be found in the
 ## Major Releases
 
 - Fall 2024: Initial release to migrate from the Drupal 7 Campus Map Bundle.
-    - The “Campus Map URL Builder” tool offered previously in the Drupal 7
-      bundle was removed, as there are more reliable ways of getting the
-      current URL for a location on the map.
-    - An undocumented `/location-lookup` API and `/location` redirects, both
-      using the legacy building codes, were also removed.
+  - The “Campus Map URL Builder” tool offered previously in the Drupal 7
+    bundle was removed, as there are more reliable ways of getting the
+    current URL for a location on the map.
+  - An undocumented `/location-lookup` API and `/location` redirects, both
+    using the legacy building codes, were also removed.
